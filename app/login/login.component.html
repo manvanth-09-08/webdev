@@ -1,0 +1,66 @@
+<div *ngIf="isValid; else loginBlock" class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-template #loginBlock>
+  <form method="post" action="shop" router-link="shop" class="container">
+    <div class="row"><div class="col">&nbsp;</div></div>
+    <div class="row">
+      <div class="col-4">
+        <input
+          type="text"
+          placeholder="Enter username"
+          name="username"
+          id="username"
+          required
+          [(ngModel)]="username"
+          class="form form-control"
+        />
+      </div>
+    </div>
+    <div class="row"><div class="col">&nbsp;</div></div>
+    <!-- <input
+      type="text"
+      placeholder="Enter username"
+      name="username"
+      id="username"
+      required
+      [(ngModel)]="username"
+      class="form form-control"
+    /> -->
+    <!-- <br />
+    <br /> -->
+
+    <div class="row">
+      <div class="col-4">
+        <input
+          type="text"
+          placeholder="Enter password"
+          name="password"
+          id="password"
+          required
+          [(ngModel)]="password"
+          class="form form-control"
+        />
+      </div>
+    </div>
+    <div class="row"><div class="col">&nbsp;</div></div>
+
+    <div class="row">
+      <div class="col-2">
+        <button class="btn btn-primary" type="submit" (click)="login()">
+          Submit
+        </button>
+      </div>
+
+      <div class="col-3">
+        <button class="btn btn-primary" type="submit" (click)="register()">
+          Register
+        </button>
+      </div>
+    </div>
+    <!-- <button class="btn btn-primary" type="submit" (click)="login()">
+      Submit
+    </button> -->
+  </form>
+</ng-template>

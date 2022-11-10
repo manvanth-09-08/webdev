@@ -1,0 +1,41 @@
+<div class="row"><div class="col">&nbsp;</div></div>
+<div class="row"><div class="col">&nbsp;</div></div>
+<div class="row"><div class="col">&nbsp;</div></div>
+
+<div class="row">
+  <div *ngFor="let toy of toys" class="col-3">
+    <div class="card" style="width: 18rem; margin-bottom: 50px">
+      <img src="{{ toy.url }}" class="card-img-top" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title">{{ toy.name }}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+        <button type="submit" class="btn btn-primary" (click)="buyToy(toy.id)">
+          Add to cart
+        </button>
+      </div>
+    </div>
+    <!-- <h4>{{ toy.name }}</h4>
+    <p>{{ toy.price }}</p>
+    <button type="submit" (click)="buyToy(toy.id)">Add to cart</button> -->
+  </div>
+  <div class="row">
+    <div class="col-4">&nbsp;</div>
+    <div class="col-6">
+      <button
+        type="submit"
+        class="btn btn-success"
+        style="width: 50%"
+        (click)="goToCart()"
+      >
+        Complete order
+      </button>
+    </div>
+  </div>
+
+  <br />
+  <br />
+  <br />
+</div>
